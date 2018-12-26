@@ -26,3 +26,4 @@ branches:
   
 script:
   - "npm run lint"
+  - "npm install webpack-cli -g"
