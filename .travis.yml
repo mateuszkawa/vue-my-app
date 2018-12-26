@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+  - 8.5.0
+script:
+  - "npm run lint"
+  - "npm run test"
+
+# blocklist
+branches:
+  except:
+  - legacy
+  - experimental
+  - develop
+
+# safelist
+branches:
+  only:
+  - master
+  - stable
+  - release
+
+  deploy:
+  provider: heroku
+  api_key:
+    secure: #HEROKU_API_KEY
+  app: vue-app1
+  on:
+    repo: mateuszkawa/vue-my-app
