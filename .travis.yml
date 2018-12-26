@@ -1,8 +1,6 @@
 language: node_js
 node_js:
   - 8.5.0
-script:
-  - "npm run lint"
 
 # blocklist
 branches:
@@ -25,3 +23,6 @@ branches:
   app: vue-app1
   on:
     repo: mateuszkawa/vue-my-app
+  
+script:
+  - "npm run lint"
